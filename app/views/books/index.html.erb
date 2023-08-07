@@ -1,16 +1,4 @@
-<h1>User info</h1>
-
-<h1>New book</h1>
-<%= form_with model: @book, url: '/books', method: :post do |f| %>
-  <h4>Title</h4>
-  <%= f.text_field :title %>
-	
-  <h4>Opnion</h4>
-  <%= f.text_area :body %>
-	<br>
-  <%= f.submit 'Create Book' %>
-  </br>
-<% end %>
+<%= render 'list', post_images: @books %>
 
 
 <p>CopyRight Infratop.inc</p>
