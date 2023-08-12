@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   def index
-    @user = current_user
+    @user = current_user.id
     @users = User.all
     @book = Book.new
     @books = Book.all
@@ -8,7 +8,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @books = @user.post_images.page(params[:page])
+    @books = @user.books
   end
 
   def edit
