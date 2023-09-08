@@ -1,0 +1,15 @@
+<h2>Books</h2>
+<table>
+  <tr>
+    <th></th>
+    <th>Title</th>
+    <th>Option</th>
+  </tr>
+  <%= @users.each do |user|%>
+    <tr>
+      <td><%= attachment_image_tag user, :profile_image, :fill, 30, 30, fallback: "no_image.jpg" %></td>
+      <td><%= link_to @books.title, book_path(@books.id) %></td>
+      <td><%= @books.body %></td>
+    </tr>
+  <% end %>
+</table>

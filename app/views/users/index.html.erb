@@ -1,1 +1,12 @@
-<%= render 'books/list', books: @books, users: :@users %>
+<%= render 'books/list', book: @book, user: :@user %>
+<h1>Users</h1>
+  <tr>
+      <th>image</th>
+      <th>name</th>
+  </tr>
+  <tbody>
+      <tr>
+          <td><%= image_tag @user.get_profile_image(100,100) %></td>
+          <td><%= user.name %></td>
+      </tr>
+  </tbody>
